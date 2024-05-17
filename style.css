@@ -1,0 +1,113 @@
+:root {
+    --text-color: white;
+    --bg-url: url(./bg-mobile.jpg);
+    --stroke-color: rgba(255, 255, 255, 0.5);
+    --surface-color: rgba(255, 255, 255, 0.1);
+    --surface-color-hover: rgba(0, 0, 0, 0.2);
+    --highlight-color: rgba(255, 255, 255, 0.1);
+    --button-bg: none;
+    --profile-image: url(./avatar.png);
+}
+
+.light {
+    --text-color: black;
+    --bg-url: url(./bg-mobile-light.jpg);
+    --stroke-color: rgba(0, 0, 0, 0.05);
+    --surface-color: rgba(0, 0, 0, 0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.1);
+    --highlight-color: rgba(0, 0, 0, 0.1);
+    --button-bg: none;
+    --profile-image: url(./avatar-light.png); /* Adicione aqui a imagem para o modo claro */
+}
+
+body {
+    background-image: var(--bg-url);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#container {
+    width: 360px;
+    height: 720px;
+    border: 1px;
+    margin: 40px auto;
+}
+
+#profile img {
+    display: block;
+    width: 112px;
+    margin: auto;
+    content: var(--profile-image);
+}
+
+#social {
+    color: var(--text-color);
+    margin: auto;
+    text-align: center;
+    padding-top: 10px;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 0;
+    padding: 8px;
+    padding-top: 20px;
+}
+
+ul a {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    padding: 16px 24px;
+    border: 1px solid;
+    font-weight: 500;
+    border-radius: 8px;
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    background: rgba(255, 255, 255, 0.02);
+    padding-top: 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li:hover a {
+    background: rgba(255, 255, 255, 0.5);
+    border: solid 1px wheat;
+}
+
+#social a {
+    gap: 16px;
+    display: inline-block;
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+    font-size: 20px;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+#social a:hover {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+#switch {
+    display: block;
+    text-align: center;
+}
+
+button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-image: var(--button-bg);
+    background-repeat: no-repeat;
+    backface-visibility: hidden;
+    border: none;
+    cursor: pointer;
+}
